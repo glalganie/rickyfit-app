@@ -1,4 +1,5 @@
-# 🏋️‍♀️ RickyFit - Applicazione Gestionale per Palestre
+![logo-noname](https://github.com/user-attachments/assets/3d38591a-53a4-4efe-99df-4b1ed0fb02b0)
+ RickyFit - Applicazione Gestionale per Palestre
 
 **RickyFit** è un'applicazione web full-stack progettata per digitalizzare e ottimizzare la gestione di una moderna palestra. Fornisce strumenti intuitivi per l'amministrazione (gestione abbonamenti, corsi) e un'esperienza coinvolgente per gli iscritti (prenotazioni, monitoraggio progressi).
 
