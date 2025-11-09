@@ -1,0 +1,59 @@
+# ===============================================
+# CONFIGURAZIONE COMUNE
+# ===============================================
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rickyfit-gym-app
+
+  jpa:
+    hibernate:
+      ddl-auto: update # In un ambiente di produzione reale, usare Flyway o Liquibase
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  thymeleaf:
+    cache: false # Disabilitare in sviluppo per vedere subito le modifiche
+
+---
+# ===============================================
+# PROFILO DI SVILUPPO (H2 In-Memory DB)
+# ===============================================
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  datasource:
+    url: jdbc:h2:mem:rickyfitdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  
+  h2:
+    console:
+      enabled: true # Accesso alla console H2 su /h2-console
+
+---
+# ===============================================
+# PROFILO DI PRODUZIONE (MySQL)
+# ===============================================
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  datasource:
+    url: jdbc:mysql://db:3306/rickyfit_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: ricky
+    password: password_sicura
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update # o 'validate' se si usa un tool di migrazione
+    show-sql: false # Non mostrare le query SQL in produzione

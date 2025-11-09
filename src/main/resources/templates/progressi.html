@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RickyFit • I tuoi Progressi</title>
+ <link rel="stylesheet" href="../static/css/progressi.css"/>
+<link rel="stylesheet" href="../static/css/navbar.css" />
+  
+</head>
+<body>
+<!-- NAVBAR COMUNE -->
+<header class="rf-navbar">
+  <div class="rf-navbar-inner">
+    <div class="rf-brand">
+      <div class="rf-logo">🏋️</div>
+      <div class="rf-brand-text">
+        <div class="rf-name">Ricky<span class="rf-accent">Fit</span></div>
+        <div class="rf-tagline">Allenati meglio.</div>
+      </div>
+    </div>
+
+    <nav class="rf-links">
+      <a href="homepage.html" class="rf-link">Home</a>
+      <a href="abbonamenti.html" class="rf-link">Abbonamenti</a>
+      <a href="corsi_prenotazioni.html" class="rf-link">Corsi</a>
+      <a href="progressi.html" class="rf-link">I tuoi progressi</a>
+      <a href="admin.html" class="rf-link rf-link-admin">Admin</a>
+    </nav>
+
+    <div class="rf-user-area">
+      <a class="rf-cta-login" href="login.html">Accedi</a>
+      <a class="rf-cta-primary" href="login.html">Prova Gratis</a>
+    </div>
+  </div>
+</header>
+
+
+
+  <!-- HEADER UTENTE -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="user-avatar">GC</div>
+
+      <div class="hero-text-block">
+        <div class="hero-welcome">Ciao Glalganie 👋</div>
+        <div class="hero-title">I tuoi progressi</div>
+        <div class="hero-sub">
+          Stai costruendo costanza. Continua così, sei già oltre l’80% del tuo obiettivo mensile.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENUTO -->
+  <section class="content">
+    <div class="content-inner">
+
+      <!-- COLONNA SINISTRA -->
+      <div>
+
+        <!-- KPI + grafico -->
+        <div class="dashboard-card">
+          <div class="card-title">
+            <span>Andamento ultimo periodo</span>
+            <span class="card-sub">Ultimi 14 giorni</span>
+          </div>
+
+          <div class="kpi-row">
+            <div class="kpi-box">
+              <div class="kpi-value">3</div>
+              <div class="kpi-label">Allenamenti<br/>questa settimana</div>
+            </div>
+
+            <div class="kpi-box">
+              <div class="kpi-value">-1.2kg</div>
+              <div class="kpi-label">Peso<br/>ultime 2 settimane</div>
+            </div>
+
+            <div class="kpi-box">
+              <div class="kpi-value">85%</div>
+              <div class="kpi-label">Obiettivo<br/>mensile</div>
+            </div>
+          </div>
+
+          <div class="graph-placeholder"></div>
+        </div>
+
+        <!-- Timeline attività -->
+        <div class="timeline-card">
+          <div class="timeline-title">
+            <span>Attività recente</span>
+            <span class="timeline-sub">Ultimi allenamenti completati ✅</span>
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-head">
+                <span>HIIT 45' con Luca</span>
+                <span>Oggi · 18:00</span>
+              </div>
+              <div class="timeline-meta">
+                Sala 2 · 430 kcal bruciate
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-head">
+                <span>Yoga Mobility</span>
+                <span>Ieri · 07:30</span>
+              </div>
+              <div class="timeline-meta">
+                Sala Relax · mobilità schiena/spalle
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-head">
+                <span>Cardio libero</span>
+                <span>Domenica · 16:10</span>
+              </div>
+              <div class="timeline-meta">
+                Tapis roulant · 45 min resistenza
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COLONNA DESTRA -->
+      <div class="side-col">
+
+        <!-- Prossima lezione + QR -->
+        <div class="next-class-card">
+          <div class="next-title">Prossima lezione</div>
+          <div class="next-body">
+            HIIT 45' con Luca<br/>
+            Oggi · 18:00 · Sala 2<br/>
+            Posti prenotati: 8/12<br/>
+            Presentati 5 min prima per il riscaldamento 💪
+          </div>
+
+          <div class="qr-box">
+            <div class="qr-placeholder"></div>
+            <div class="qr-hint">
+              QR personale<br/>
+              Mostralo all'ingresso per il check-in
+            </div>
+          </div>
+        </div>
+
+        <!-- Suggerimento AI Coach -->
+        <div class="coach-card">
+          <div class="coach-head">
+            <div class="coach-title">Suggerimento AI Coach</div>
+            <div class="coach-badge">AI Coach</div>
+          </div>
+          <div class="coach-body">
+            Hai saltato lo stretching negli ultimi 7 giorni.
+            Ti propongo 15 minuti di mobilità spalle e anche domani mattina.
+            Vuoi aggiungerlo al calendario?
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-block-title">RickyFit</div>
+        <div class="footer-text">
+          Via Energia 21, Torino<br/>
+          Lun-Ven 06:00 - 22:00<br/>
+          Sab-Dom 08:00 - 20:00
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-block-title">Supporto</div>
+        <div class="footer-text">
+          info@rickyfit.example<br/>
+          Hai bisogno di un coach? Scrivici.
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-block-title">Il tuo account</div>
+        <div class="footer-links">
+          <a href="#">Corsi & Prenotazioni</a>
+          <a href="#">Abbonamento</a>
+          <a href="#">Profilo & Pagamenti</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © 2025 RickyFit. Tutti i diritti riservati.
+    </div>
+  </footer>
+
+</body>
+</html>

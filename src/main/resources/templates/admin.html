@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RickyFit • Area Admin</title>
+ <link rel="stylesheet" href="../static/css/admin.css"/>
+<link rel="stylesheet" href="../static/css/navbar.css" />
+ 
+</head>
+<body>
+<!-- NAVBAR COMUNE -->
+<header class="rf-navbar">
+  <div class="rf-navbar-inner">
+    <div class="rf-brand">
+      <div class="rf-logo">🏋️</div>
+      <div class="rf-brand-text">
+        <div class="rf-name">Ricky<span class="rf-accent">Fit</span></div>
+        <div class="rf-tagline">Allenati meglio.</div>
+      </div>
+    </div>
+
+    <nav class="rf-links">
+      <a href="homepage.html" class="rf-link">Home</a>
+      <a href="abbonamenti.html" class="rf-link">Abbonamenti</a>
+      <a href="corsi_prenotazioni.html" class="rf-link">Corsi</a>
+      <a href="progressi.html" class="rf-link">I tuoi progressi</a>
+      <a href="admin.html" class="rf-link rf-link-admin">Admin</a>
+    </nav>
+
+    <div class="rf-user-area">
+      <a class="rf-cta-login" href="login.html">Accedi</a>
+      <a class="rf-cta-primary" href="login.html">Prova Gratis</a>
+    </div>
+  </div>
+</header>
+
+
+  <!-- HEADER ADMIN -->
+  <header class="admin-hero">
+    <div class="admin-inner">
+      <div class="admin-titles">
+        <div class="admin-eyebrow">Area Admin</div>
+        <div class="admin-title">Benvenuto Ricky 👋</div>
+        <div class="admin-sub">
+          Qui controlli iscritti attivi, riempimento corsi e ricavi mensili.
+          Se qualcosa riempie troppo in fretta → crea un nuovo corso. Se qualcuno sta per scadere → richiamalo.
+        </div>
+      </div>
+
+      <div class="admin-actions">
+        <button class="btn-action">+ Nuovo corso</button>
+        <button class="btn-action">+ Nuovo evento</button>
+        <button class="btn-action alt">Invia promo via email</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENUTO -->
+  <main class="admin-content">
+    <div class="admin-content-inner">
+
+      <!-- COLONNA SINISTRA -->
+      <section>
+        <!-- KPI -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-label">Iscritti attivi</div>
+            <div class="kpi-value">128</div>
+            <div class="kpi-hint">+5 questa settimana</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Abbonamenti in scadenza (7gg)</div>
+            <div class="kpi-value">11</div>
+            <div class="kpi-hint">Suggerito: ricontatto</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Corsi pieni oggi</div>
+            <div class="kpi-value">4</div>
+            <div class="kpi-hint">Aggiungi slot extra?</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">MRR stimato (ricavo mensile)</div>
+            <div class="kpi-value">€4.320</div>
+            <div class="kpi-hint">+12% vs mese scorso</div>
+          </div>
+        </div>
+
+        <!-- TABELLA ISCRITTI -->
+        <div class="panel" style="margin-bottom:2rem;">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Iscritti / Stato abbonamento</div>
+              <div class="panel-sub">Chi rischia di scadere presto</div>
+            </div>
+            <div class="panel-sub">Ultimo aggiornamento: oggi</div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Piano</th>
+                  <th>Scadenza</th>
+                  <th>Stato</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mario Rossi</td>
+                  <td>Plus</td>
+                  <td>31/10</td>
+                  <td><span class="status-pill pill-warning">Scade a breve</span></td>
+                </tr>
+                <tr>
+                  <td>Chiara Bianchi</td>
+                  <td>Premium</td>
+                  <td>15/11</td>
+                  <td><span class="status-pill pill-active">Attivo</span></td>
+                </tr>
+                <tr>
+                  <td>Luca Verdi</td>
+                  <td>Base</td>
+                  <td>28/10</td>
+                  <td><span class="status-pill pill-danger">Scaduto ieri</span></td>
+                </tr>
+                <tr>
+                  <td>Sara Neri</td>
+                  <td>Plus</td>
+                  <td>08/11</td>
+                  <td><span class="status-pill pill-active">Attivo</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- COLONNA DESTRA -->
+      <section>
+
+        <!-- TABELLA CORSI DI OGGI -->
+        <div class="panel" style="margin-bottom:2rem;">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Corsi di oggi</div>
+              <div class="panel-sub">Capienza e riempimento</div>
+            </div>
+            <div class="panel-sub">Ultimo refresh: 5 min fa</div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Corso</th>
+                  <th>Orario</th>
+                  <th>Trainer</th>
+                  <th>Posti</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HIIT 45'</td>
+                  <td>18:00</td>
+                  <td>Luca</td>
+                  <td>8 / 12</td>
+                </tr>
+                <tr>
+                  <td>Yoga Mobility</td>
+                  <td>07:30</td>
+                  <td>Chiara</td>
+                  <td>9 / 10</td>
+                </tr>
+                <tr>
+                  <td>Functional Strength</td>
+                  <td>19:00</td>
+                  <td>Martina</td>
+                  <td>7 / 8</td>
+                </tr>
+                <tr>
+                  <td>Stretch & Recovery</td>
+                  <td>17:00</td>
+                  <td>Chiara</td>
+                  <td>5 / 10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TABELLA PAGAMENTI RECENTI -->
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Pagamenti recenti</div>
+              <div class="panel-sub">Ultime 24 ore</div>
+            </div>
+            <div class="panel-sub">MRR €4.320</div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Utente</th>
+                  <th>Piano</th>
+                  <th>Importo</th>
+                  <th>Metodo</th>
+                  <th>Data</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Chiara Bianchi</td>
+                  <td>Premium</td>
+                  <td>€69</td>
+                  <td>Carta</td>
+                  <td>30/10 09:22</td>
+                </tr>
+                <tr>
+                  <td>Mario Rossi</td>
+                  <td>Plus</td>
+                  <td>€49</td>
+                  <td>SEPA</td>
+                  <td>30/10 08:14</td>
+                </tr>
+                <tr>
+                  <td>Anna Blu</td>
+                  <td>Base</td>
+                  <td>€29</td>
+                  <td>Contanti</td>
+                  <td>29/10 18:40</td>
+                </tr>
+                <tr>
+                  <td>Luca Verdi</td>
+                  <td>Base</td>
+                  <td>€29</td>
+                  <td>Carta</td>
+                  <td>29/10 17:05</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-block-title">RickyFit Admin</div>
+        <div class="footer-text">
+          Gestione iscritti, corsi, abbonamenti e ricavi in un unico posto.
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-block-title">Azioni rapide</div>
+        <div class="footer-text">
+          + Nuovo corso<br/>
+          + Invio promo email<br/>
+          + Aggiorna prezzi abbonamenti
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-block-title">Supporto interno</div>
+        <div class="footer-links">
+          <a href="#">Manuale istruttori</a>
+          <a href="#">FAQ gestione pagamenti</a>
+          <a href="#">Scarica report mensile</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © 2025 RickyFit Admin Dashboard. Tutti i diritti riservati.
+    </div>
+  </footer>
+
+</body>
+</html>

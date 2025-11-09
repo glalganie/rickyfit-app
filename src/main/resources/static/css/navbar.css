@@ -1,0 +1,171 @@
+/* ===== NAVBAR RICKYFIT ===== */
+
+.rf-navbar {
+  position: sticky;           /* rimane in alto mentre scrolli */
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.8); /* blu notte trasparente */
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.6),
+    0 2px 4px rgba(0,0,0,.8);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  color: #fff;
+  padding: .75rem 1rem;
+  font-size: 0.9rem;
+}
+
+.rf-navbar-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+/* BRAND LEFT */
+.rf-brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  min-width: 0;
+}
+
+/*.rf-logo {
+  background: #1f2a44;
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 600;
+  width: 40px;
+  height: 40px;
+  border-radius: .5rem;
+  display: grid;
+  place-items: center;
+  box-shadow:
+    0 16px 32px rgba(0,0,0,.6),
+    0 2px 4px rgba(0,0,0,.7);
+  border: 2px solid rgba(255,255,255,.2);
+}*/
+
+.rf-logo {
+  padding: 0; /* togliamo lo sfondo interno */
+  background: transparent;
+  border: none;
+}
+.rf-logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+
+}
+
+
+.rf-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.rf-name {
+  color: #fff;
+  font-weight: 600;
+  font-size: .9rem;
+}
+.rf-accent {
+  color: #38bdf8; /* blu acceso */
+}
+.rf-tagline {
+  font-size: .7rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.6);
+}
+
+/* LINKS CENTER */
+.rf-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.rf-link {
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: .8rem;
+  line-height: 1.2;
+  padding: .5rem .4rem;
+  border-radius: .4rem;
+  transition: all .15s;
+}
+.rf-link:hover {
+  color: #fff;
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 12px 24px rgba(0,0,0,.8);
+}
+
+/* ADMIN link evidenziato */
+.rf-link-admin {
+  color: #facc15;
+  font-weight: 600;
+}
+
+/* USER AREA RIGHT */
+.rf-user-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: flex-end;
+}
+
+.rf-cta-login {
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: .6rem .8rem;
+  border-radius: .6rem;
+  line-height: 1.2;
+  border: 1px solid rgba(255,255,255,.2);
+  box-shadow:
+    0 12px 24px rgba(0,0,0,.8),
+    0 2px 4px rgba(0,0,0,.9);
+}
+
+.rf-cta-primary {
+  background: linear-gradient(135deg, #ffb027 0%, #ff7a00 100%);
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: .6rem .8rem;
+  border-radius: .6rem;
+  line-height: 1.2;
+  box-shadow:
+    0 18px 40px rgba(255,122,0,.5),
+    0 2px 4px rgba(0,0,0,.7);
+  border: 0;
+}
+
+/* RESPONSIVE: su mobile mettiamo menu più semplice */
+@media (max-width: 800px) {
+  .rf-navbar-inner {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand user"
+      "links links";
+    row-gap: .75rem;
+  }
+
+  .rf-brand { grid-area: brand; }
+  .rf-user-area { grid-area: user; }
+  .rf-links {
+    grid-area: links;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: .5rem;
+  }
+}

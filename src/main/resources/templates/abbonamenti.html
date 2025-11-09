@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RickyFit • Abbonamenti</title>
+<link rel="stylesheet" href="../static/css/navbar.css" />
+<link rel="stylesheet" href="../static/css/abbonamenti.css" />
+ 
+</head>
+<body>
+ <!-- NAVBAR COMUNE -->
+<header class="rf-navbar">
+  <div class="rf-navbar-inner">
+    <div class="rf-brand">
+      <div class="rf-logo">🏋️</div>
+      <div class="rf-brand-text">
+        <div class="rf-name">Ricky<span class="rf-accent">Fit</span></div>
+        <div class="rf-tagline">Allenati meglio.</div>
+      </div>
+    </div>
+
+    <nav class="rf-links">
+      <a href="homepage.html" class="rf-link">Home</a>
+      <a href="abbonamenti.html" class="rf-link">Abbonamenti</a>
+      <a href="corsi_prenotazioni.html" class="rf-link">Corsi</a>
+      <a href="progressi.html" class="rf-link">I tuoi progressi</a>
+      <a href="admin.html" class="rf-link rf-link-admin">Admin</a>
+    </nav>
+
+    <div class="rf-user-area">
+      <a class="rf-cta-login" href="login.html">Accedi</a>
+      <a class="rf-cta-primary" href="login.html">Prova Gratis</a>
+    </div>
+  </div>
+</header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">Senza vincoli nascosti</div>
+        <h1 class="hero-title">Il tuo corpo, il tuo ritmo.</h1>
+        <p class="hero-sub">
+          Scegli il piano che si adatta davvero alla tua vita.
+          Entra quando vuoi, sospendi quando vuoi.
+        </p>
+
+        <div class="hero-cta-wrap">
+          <a class="btn-dark" href="#">Attiva subito</a>
+          <a class="btn-light" href="#">Prova gratis 7 giorni</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-visual-overlay"></div>
+        <div class="hero-visual-content">
+          <div class="hero-visual-title">Allenati con noi</div>
+          <div class="hero-visual-desc">
+            Pesi, cardio, corsi di gruppo e supporto tecnico.
+            Qui conti tu — non l’abbonamento.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIANI -->
+  <section class="pricing-section">
+    <div class="section-inner">
+      <div class="pricing-head">
+        <div class="pricing-eyebrow">Abbonamenti</div>
+        <div class="pricing-title">Trasforma la motivazione in abitudine</div>
+        <div class="pricing-sub">
+          Tutti i piani includono accesso con QR code e monitoraggio dei tuoi progressi.
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Piano Base -->
+        <div class="pricing-card">
+          <div class="plan-badge">Base</div>
+          <div class="plan-name">Accesso Palestra</div>
+          <div class="plan-price">29€ / mese</div>
+          <div class="plan-desc">
+            Perfetto per iniziare senza pressione.
+          </div>
+
+          <ul class="plan-list">
+            <li>Accesso sala pesi & cardio</li>
+            <li>Check-in veloce via QR</li>
+            <li>Tracciamento frequenza allenamenti</li>
+          </ul>
+
+          <button class="plan-cta">Attiva il piano Base</button>
+        </div>
+
+        <!-- Piano Plus (in evidenza) -->
+        <div class="pricing-card highlight">
+          <div class="plan-badge">Più scelto</div>
+          <div class="plan-name">Corsi & Coach</div>
+          <div class="plan-price">49€ / mese</div>
+          <div class="plan-desc">
+            Spinta vera, guida reale.
+          </div>
+
+          <ul class="plan-list">
+            <li>Tutti i corsi di gruppo inclusi</li>
+            <li>Coach che ti segue ogni settimana</li>
+            <li>Report progressi via app</li>
+            <li>Reminder allenamenti e postura corretta</li>
+          </ul>
+
+          <button class="plan-cta">Attiva il piano Plus</button>
+        </div>
+
+        <!-- Piano Premium -->
+        <div class="pricing-card">
+          <div class="plan-badge">Premium</div>
+          <div class="plan-name">Full Experience</div>
+          <div class="plan-price">69€ / mese</div>
+          <div class="plan-desc">
+            Elite mode: nessun limite.
+          </div>
+
+          <ul class="plan-list">
+            <li>Sessioni personal trainer 1:1</li>
+            <li>Piano nutrizionale su misura</li>
+            <li>Accesso area wellness & recovery</li>
+            <li>Supporto su obiettivi specifici (gara, definizione, forza)</li>
+          </ul>
+
+          <button class="plan-cta">Attiva il piano Premium</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      <div class="faq-head">
+        <div class="faq-title">Domande Frequenti</div>
+        <div class="faq-sub">
+          Dubbi su sospensione, certificato medico o durata minima?
+          Qui trovi le risposte.
+        </div>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Posso sospendere l’abbonamento?</div>
+          <div class="faq-a">
+            Sì. Puoi mettere in pausa il tuo piano (per ferie, lavoro, studio)
+            senza perdere lo storico dei tuoi progressi.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Serve un vincolo annuale?</div>
+          <div class="faq-a">
+            No. Puoi restare mese per mese. Se vuoi risparmiare,
+            puoi attivare un piano annuale scontato ma non è obbligatorio.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Serve il certificato medico?</div>
+          <div class="faq-a">
+            Per le attività in sala pesi basta certificato non agonistico.
+            Per corsi ad alta intensità e attività specifiche (HIIT avanzato)
+            potrebbe essere richiesto agonistico.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Cosa include il piano Premium?</div>
+          <div class="faq-a">
+            Trainer personale, piano nutrizionale, controllo postura,
+            monitoraggio settimanale e accesso area wellness/recovery.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="final-cta-section">
+    <div class="final-cta-inner">
+      <div class="final-cta-title">
+        Pronto a iniziare?
+      </div>
+      <div class="final-cta-desc">
+        Attiva il tuo piano in meno di 2 minuti.  
+        Se hai già un profilo, accedi e continua da dove hai lasciato.
+      </div>
+
+      <div class="final-cta-buttons">
+        <a class="btn-accent" href="#">Registrati ora</a>
+        <a class="btn-outline" href="#">Ho già un account</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-block-title">RickyFit</div>
+        <div class="footer-text">
+          Via Energia 21, Torino<br/>
+          Lun-Ven 06:00 - 22:00<br/>
+          Sab-Dom 08:00 - 20:00
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-block-title">Contatti</div>
+        <div class="footer-text">
+          Tel: +39 333 000 0000<br/>
+          Email: info@rickyfit.example<br/>
+          IG / TikTok: @rickyfit
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-block-title">Link utili</div>
+        <div class="footer-links">
+          <a href="#">Homepage</a>
+          <a href="#">Corsi & Prenotazioni</a>
+          <a href="#">I tuoi Progressi</a>
+          <a href="#">Login / Registrazione</a>
+          <a href="#">Privacy & Termini</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © 2025 RickyFit. Tutti i diritti riservati.
+    </div>
+  </footer>
+
+</body>
+</html>

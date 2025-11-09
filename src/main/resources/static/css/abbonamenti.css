@@ -1,0 +1,514 @@
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", Roboto, "Segoe UI", sans-serif;
+    }
+
+    body {
+      color: #1a1a1a;
+      background-color: #0f0f0f;
+      line-height: 1.4;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      background: radial-gradient(circle at 20% 20%, #ffec99 0%, #ffb027 30%, #ff7a00 60%, #cc4a00 100%);
+      color: #1a1a1a;
+      padding: 3rem 1.5rem 2rem;
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (max-width: 850px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .hero-copy {
+      max-width: 520px;
+    }
+
+    .eyebrow {
+      background: #1f2a44;
+      color: #fff;
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 600;
+      padding: .4rem .6rem;
+      line-height: 1;
+      border-radius: .5rem;
+      box-shadow:
+        0 16px 32px rgba(0,0,0,.5),
+        0 2px 4px rgba(0,0,0,.6);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 1rem + 2vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      text-shadow: 0 20px 40px rgba(0,0,0,.4);
+      color: #1a1a1a;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      line-height: 1.45;
+      color: rgba(26,26,26,.8);
+      font-weight: 500;
+      margin-top: 1rem;
+      max-width: 420px;
+    }
+
+    @media (max-width: 850px) {
+      .hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .hero-cta-wrap {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero-cta-wrap {
+        justify-content: center;
+      }
+    }
+
+    .btn-dark {
+      background: #1f2a44;
+      color: #fff;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: .8rem 1rem;
+      border-radius: .6rem;
+      box-shadow:
+        0 18px 40px rgba(31,42,68,.6),
+        0 2px 4px rgba(0,0,0,.4);
+      text-decoration: none;
+      min-width: 170px;
+      text-align: center;
+    }
+
+    .btn-light {
+      background: rgba(255,255,255,.2);
+      color: #1f2a44;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: .8rem 1rem;
+      border-radius: .6rem;
+      box-shadow:
+        0 12px 24px rgba(0,0,0,.2),
+        0 2px 4px rgba(0,0,0,.4);
+      border: 2px solid rgba(255,255,255,.5);
+      text-decoration: none;
+      min-width: 170px;
+      text-align: center;
+      backdrop-filter: blur(4px);
+    }
+
+    /* Illustrazione hero destra */
+    .hero-visual {
+      background: radial-gradient(circle at 30% 30%, rgba(0,0,0,.4) 0%, rgba(0,0,0,.9) 70%);
+      min-height: 250px;
+      border-radius: 1rem;
+      border: 2px solid rgba(0,0,0,.15);
+      box-shadow:
+        0 40px 100px rgba(0,0,0,.7),
+        0 4px 8px rgba(0,0,0,.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      background-image: url("https://via.placeholder.com/500x350?text=Allenati+con+noi");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-visual-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(0,0,0,.3) 0%, rgba(0,0,0,.8) 70%);
+      border-radius: 1rem;
+    }
+
+    .hero-visual-content {
+      position: relative;
+      z-index: 10;
+      font-size: .8rem;
+      font-weight: 500;
+      line-height: 1.4;
+      max-width: 260px;
+      text-shadow: 0 20px 40px rgba(0,0,0,.9);
+    }
+
+    .hero-visual-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: .5rem;
+      color: #fff;
+    }
+    .hero-visual-desc {
+      color: rgba(255,255,255,.8);
+    }
+
+    /* ================= PIANI ================= */
+    .pricing-section {
+      background: #ffffff;
+      padding: 3rem 1.5rem;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pricing-head {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-eyebrow {
+      color: #ff7a00;
+      font-size: .8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: .5rem;
+    }
+
+    .pricing-title {
+      font-size: clamp(1.4rem, .5rem + 1vw, 1.8rem);
+      font-weight: 700;
+      color: #1f2a44;
+      margin-bottom: .5rem;
+    }
+
+    .pricing-sub {
+      color: #6b7280;
+      font-size: .9rem;
+      max-width: 480px;
+      margin: 0.5rem auto 0;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .pricing-card {
+      border-radius: .9rem;
+      border: 1px solid rgba(0,0,0,.07);
+      box-shadow:
+        0 30px 60px rgba(0,0,0,.07),
+        0 2px 4px rgba(0,0,0,.07);
+      padding: 1.5rem;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .plan-badge {
+      font-size: .7rem;
+      font-weight: 600;
+      color: #fff;
+      background: #1f2a44;
+      padding: .35rem .5rem;
+      border-radius: .4rem;
+      display: inline-block;
+      box-shadow:
+        0 12px 24px rgba(31,42,68,.4),
+        0 2px 4px rgba(0,0,0,.4);
+      margin-bottom: .75rem;
+      width: fit-content;
+    }
+
+    .plan-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1f2a44;
+      margin-bottom: .25rem;
+    }
+
+    .plan-price {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: .5rem;
+    }
+
+    .plan-desc {
+      font-size: .85rem;
+      color: #6b7280;
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .plan-list {
+      font-size: .8rem;
+      line-height: 1.4;
+      color: #1a1a1a;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+      padding-left: 1rem;
+    }
+
+    .plan-list li {
+      margin-bottom: .5rem;
+    }
+
+    .plan-cta {
+      background: #1f2a44;
+      color: #fff;
+      font-weight: 600;
+      font-size: .9rem;
+      padding: .7rem .9rem;
+      border-radius: .6rem;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+      box-shadow:
+        0 18px 40px rgba(31,42,68,.6),
+        0 2px 4px rgba(0,0,0,.4);
+    }
+
+    /* Piano centrale highlight */
+    .highlight {
+      border: 2px solid #0095ff;
+      box-shadow:
+        0 30px 60px rgba(0,149,255,.25),
+        0 2px 4px rgba(0,0,0,.4);
+    }
+
+    .highlight .plan-badge {
+      background: #0095ff;
+      box-shadow:
+        0 12px 24px rgba(0,149,255,.4),
+        0 2px 4px rgba(0,0,0,.4);
+    }
+
+    /* ================= FAQ ================= */
+    .faq-section {
+      background: #ffffff;
+      padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid rgba(0,0,0,.05);
+    }
+
+    .faq-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-head {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .faq-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1f2a44;
+      margin-bottom: .5rem;
+    }
+
+    .faq-sub {
+      font-size: .9rem;
+      color: #6b7280;
+      font-weight: 500;
+      line-height: 1.4;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .faq-list {
+      margin-top: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      border-radius: .75rem;
+      border: 1px solid rgba(0,0,0,.07);
+      box-shadow:
+        0 20px 40px rgba(0,0,0,.05),
+        0 2px 4px rgba(0,0,0,.07);
+      padding: 1rem 1.25rem;
+      background: #fff;
+    }
+
+    .faq-q {
+      font-size: .9rem;
+      font-weight: 600;
+      color: #1f2a44;
+      margin-bottom: .5rem;
+    }
+
+    .faq-a {
+      font-size: .8rem;
+      line-height: 1.4;
+      font-weight: 500;
+      color: #6b7280;
+    }
+
+    /* ================= CTA FINALE ================= */
+    .final-cta-section {
+      background: #0f172a;
+      color: #fff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .final-cta-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .final-cta-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: .75rem;
+    }
+
+    .final-cta-desc {
+      color: rgba(255,255,255,.7);
+      font-size: .9rem;
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+    }
+
+    .final-cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .75rem;
+    }
+
+    .btn-accent {
+      background: linear-gradient(135deg, #ffb027 0%, #ff7a00 100%);
+      color: #1a1a1a;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: .8rem 1rem;
+      border-radius: .6rem;
+      min-width: 170px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow:
+        0 18px 40px rgba(255,122,0,.5),
+        0 2px 4px rgba(0,0,0,.7);
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,.07);
+      border: 2px solid rgba(255,255,255,.4);
+      color: #fff;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: .8rem 1rem;
+      border-radius: .6rem;
+      min-width: 170px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow:
+        0 12px 24px rgba(0,0,0,.6),
+        0 2px 4px rgba(0,0,0,.8);
+      backdrop-filter: blur(4px);
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background: #0f172a;
+      color: #fff;
+      padding: 2rem 1.5rem;
+      font-size: .8rem;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 850px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .footer-block-title {
+      font-weight: 600;
+      font-size: .85rem;
+      margin-bottom: .5rem;
+      color: #fff;
+    }
+
+    .footer-text {
+      color: rgba(255,255,255,.7);
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,.7);
+      text-decoration: none;
+      display: block;
+      margin-bottom: .4rem;
+      font-weight: 400;
+    }
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .footer-copy {
+      text-align: center;
+      color: rgba(255,255,255,.4);
+      margin-top: 2rem;
+      font-size: .7rem;
+      line-height: 1.4;
+    }

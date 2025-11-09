@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Servizio Applicazione Spring Boot
+  backend:
+    build: .
+    container_name: rickyfit-app
+    ports:
+      - "8080:8080"
+    environment:
+      # Configurazione per il database MySQL
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/rickyfit_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: ricky
+      SPRING_DATASOURCE_PASSWORD: password_sicura
+      SPRING_PROFILES_ACTIVE: prod
+    depends_on:
+      - db
+    restart: on-failure
+
+  # Servizio Database MySQL
+  db:
+    image: mysql:8.0
+    container_name: rickyfit-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_sicura
+      MYSQL_DATABASE: rickyfit_db
+      MYSQL_USER: ricky
+      MYSQL_PASSWORD: password_sicura
+    volumes:
+      # Monta uno script SQL per inizializzazione (opzionale se JPA gestisce tutto)
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      # Volume per la persistenza dei dati
+      - rickyfit_db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+
+volumes:
+  rickyfit_db_data:
