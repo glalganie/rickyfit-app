@@ -4,10 +4,11 @@
  - Applicazione Gestionale per Palestre
 
 **RickyFit** è un'applicazione web full-stack progettata per digitalizzare e ottimizzare la gestione di una moderna palestra. Fornisce strumenti intuitivi per l'amministrazione (gestione abbonamenti, corsi) e un'esperienza coinvolgente per gli iscritti (prenotazioni, monitoraggio progressi).
-<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/04e11b6f-51f3-469c-ad74-493deb6f98d7" />
-<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/04250991-8c01-4356-b113-22d7854e766a" />
-<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/c82af269-5e63-407e-ab8d-0671fd235e7e" />
-<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/afe6573d-4217-4984-aa6b-541afcb69285" />
+
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/04e11b6f-51f3-469c-ad74-493deb6f98d7" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/04250991-8c01-4356-b113-22d7854e766a" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/c82af269-5e63-407e-ab8d-0671fd235e7e" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/afe6573d-4217-4984-aa6b-541afcb69285" />
 
 
 
